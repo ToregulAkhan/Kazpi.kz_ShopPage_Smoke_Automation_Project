@@ -16,7 +16,6 @@ public class HomePageTest extends BaseTest {
 
     @Test
     public void checkAllCategoriesText(){
-        homePage.open();
         List<String> category = List.of("телефоны и гаджеты", "бытовая техника", "тв, аудио, видео",
                 "компьютеры", "мебель", "красота, здоровье", "детские товары", "аптека");
 
@@ -24,5 +23,22 @@ public class HomePageTest extends BaseTest {
         for (WebElement i : elements){
             Assert.assertTrue(category.contains(i.getText().toLowerCase()));
         }
+    }
+
+    @Test
+    public void chooseCity(){
+        By almaty = By.cssSelector("[data-city-id=\"750000000\"]");
+        By astana = By.cssSelector("[data-city-id=\"710000000\"]");
+        By semey = By.cssSelector("[data-city-id=\"632810000\"]");
+        By city = By.cssSelector("[data-test-id=\"current-city\"]");
+
+        List<By> cities = List.of(semey, astana, almaty);
+
+        for (By c : cities){
+            homePage.click(city);
+            homePage.click(c);
+            homePage.refreshed(city);
+        }
+
     }
 }

@@ -16,6 +16,7 @@ public class BaseTest {
     public void setUp(){
         driver = DriverManager.getDriver();
         homePage =new HomePage(driver);
+        homePage.open();
     }
 
     @AfterMethod

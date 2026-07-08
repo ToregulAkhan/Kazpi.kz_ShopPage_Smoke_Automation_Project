@@ -47,6 +47,10 @@ public class BasePage {
         }
     }
 
+    public WebElement refreshed(By locator){
+        return waitUtils.waitRefreshed(locator);
+    }
+
     public void ClearAndType(By locator, String text){
         WebElement element = waitUtils.waitVisible(locator);
         element.clear();
