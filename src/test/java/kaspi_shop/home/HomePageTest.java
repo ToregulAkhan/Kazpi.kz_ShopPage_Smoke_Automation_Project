@@ -2,6 +2,8 @@ package kaspi_shop.home;
 
 import kaspi_shop.base.BasePage;
 import kaspi_shop.base.BaseTest;
+import kaspi_shop.constants.Locator;
+import kaspi_shop.constants.Urls;
 import kaspi_shop.pages.HomePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,10 +11,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class HomePageTest extends BaseTest {
 
@@ -69,10 +68,31 @@ public class HomePageTest extends BaseTest {
         List<By> cities = List.of(semey, astana, almaty);
 
         for (By c : cities){
+            Assert.assertTrue(homePage.isDisplayed(city));
             homePage.click(city);
+            Assert.assertTrue(homePage.isDisplayed(c));
             homePage.click(c);
             homePage.refreshed(city);
         }
+    }
+
+
+    @Test
+    public void checkLogoDisplayed(){
+        By logo = By.cssSelector("[class=\"ds-image__img ds-image__img--contain\"]");
+        Assert.assertTrue(homePage.isDisplayed(logo));
+    }
+
+
+    @Test
+    public void checkSearchWorks() throws InterruptedException {
+        String elementForSearch = "книга";
+        By item_card = By.cssSelector("[class=\"item-card ddl_product ddl_product_link undefined \"]");
+
+        homePage.searchPage().search();
+        homePage.searchPage().inputToSearch(elementForSearch);
+        Assert.assertTrue(homePage.searchPage().isMoreDisplayed(item_card));
+
 
     }
 }

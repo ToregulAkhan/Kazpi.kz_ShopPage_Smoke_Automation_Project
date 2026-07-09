@@ -36,4 +36,8 @@ public class HomePage extends BasePage {
         return waitUtils.waitPresent(locator).getText();
     }
 
+    public SearchPage searchPage(){
+        return new SearchPage(driver);
+    }
+
 }

@@ -44,4 +44,8 @@ public class WaitUtils {
     public List<WebElement> waitPresentAll(By locator) {
         return wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator));
     }
+
+    public void waitInvisible(By locator){
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
+    }
 }

@@ -1,4 +1,8 @@
 package kaspi_shop.category;
 
-public class CategoryFilterTest {
+import kaspi_shop.base.BaseTest;
+import org.testng.annotations.Test;
+
+public class CategoryFilterTest extends BaseTest {
+
 }
