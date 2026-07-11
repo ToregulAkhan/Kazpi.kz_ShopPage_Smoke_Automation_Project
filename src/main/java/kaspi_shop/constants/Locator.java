@@ -15,6 +15,7 @@ public class Locator {
     public static final By ACTUAL_SELECT_LIST = By.xpath("//div[@class=\"select__title\"]//span");
     public static final By ACTIVE_FILTER_ROW = By.cssSelector("[class=\"filters__filter-row _active \"]");
 
+    //filters_filter
     public static final By PRICE_10000 = By.xpath("//span[text()='до 10 000 т']");
     public static final By PRICE_100000_149999 = By.xpath("//span[text()='100 000 - 149 999 т']");
     public static final By PRICE_500000 = By.xpath("//span[text()='более 500 000 т']");
@@ -24,6 +25,7 @@ public class Locator {
     public static final By SULPAK = By.xpath("//span[text()='Sulpаk']");
     public static final By SELLERS = By.xpath("//span[text()='Продавцы']/following-sibling::div//div[contains(@class,'filters__filter-row')]");
 
+    //select_list_item
     public static final By POPULAR_LIST = By.cssSelector("[data-id=\"relevance\"]");
     public static final By NEW_LIST = By.cssSelector("[data-id=\"created-desc\"]");
     public static final By CHEEP_PRICE_LIST = By.cssSelector("[data-id=\"price-asc\"]");
@@ -32,8 +34,12 @@ public class Locator {
 
     public static final By PRICE_LINK = By.cssSelector("[class=\"item__price-once\"]");
 
+    //pagination
     public static final By PREVIOUS = By.xpath("//li[text()=\"← Предыдущая\"]");
     public static final By NEXT = By.xpath("//li[text()=\"Следующая →\"]");
+    public static final By DISABLED = By.cssSelector("[class=\"pagination__el _disabled\"]");
+    public static final By ACTIVE = By.cssSelector("[class=\"pagination__el _active\"]");
+    public static final By PAGINATION_EL = By.cssSelector("[class=\"pagination__el\"]");
 
 
 
