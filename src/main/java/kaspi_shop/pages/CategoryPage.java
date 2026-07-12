@@ -57,6 +57,20 @@ public class CategoryPage extends BasePage {
         }
         Assert.assertFalse(getVisibleAll(Locator.ITEM_CARD).isEmpty());
     }
-
+    public void checkActiveRow(String s){
+        int count = 0;
+        while (true){
+            try {
+                String expected = s.split("\\(")[0].trim();
+                String actual = getText(Locator.ACTIVE_FILTER_ROW).split("\\(")[0].trim();
+                Assert.assertEquals(actual, expected);
+                break;
+            }catch (AssertionError e){
+                if (count == 4){
+                    throw e;
+                }count++;
+            }
+        }
+    }
 
 }

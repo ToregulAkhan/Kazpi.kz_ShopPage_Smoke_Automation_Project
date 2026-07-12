@@ -25,19 +25,8 @@ public class PriceFilterTest extends BaseTest {
 
             priceList.get(i).click();
 
-            int count = 0;
-            while (true){
-                try {
-                    String expected = price.split("\\(")[0].trim();
-                    String actual = categoryPage.getText(Locator.ACTIVE_FILTER_ROW).split("\\(")[0].trim();
-                    Assert.assertEquals(actual, expected);
-                    break;
-                }catch (AssertionError e){
-                    if (count == 4){
-                        throw e;
-                    }count++;
-                }
-            }
+            categoryPage.checkActiveRow(price);
+
             Thread.sleep(2000);
             categoryPage.checkItems();
 
@@ -49,4 +38,5 @@ public class PriceFilterTest extends BaseTest {
     public void setCategoryPage(){
         categoryPage = homePage.categoryPageOpen();
     }
+
 }
