@@ -144,4 +144,8 @@ public class BasePage {
         return Integer.parseInt(digits);
     }
 
+    public void waitUpdatePage(WebElement oldElement){
+        waitUtils.waitStaleness(oldElement);
+    }
+
 }

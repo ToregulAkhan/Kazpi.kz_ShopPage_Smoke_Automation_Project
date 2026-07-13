@@ -52,4 +52,8 @@ public class WaitUtils {
     public void waitInvisible(By locator){
         wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
     }
+
+    public void waitStaleness(WebElement oldElement) {
+        wait.until(ExpectedConditions.stalenessOf(oldElement));
+    }
 }

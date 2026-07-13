@@ -28,6 +28,7 @@ public class Locator {
     public static final By FILTER_PRICE = By.xpath("//span[text()='Цена']/following-sibling::div//div[contains(@class,'filters__filter-row')]");
     public static final By FILTER_BRAND = By.xpath("//span[text()='Бренд']/following-sibling::div//div[contains(@class,'filters__filter-row')]");
     public static final By BUTTON_SHOW_ELSE = By.cssSelector("[class=\"filters__spoiler \"]");
+    public static final By BUTTON_HIDE_ELSE = By.cssSelector("[class=\"filters__spoiler _active\"]");
 
     //select_list_item
     public static final By POPULAR_LIST = By.cssSelector("[data-id=\"relevance\"]");
