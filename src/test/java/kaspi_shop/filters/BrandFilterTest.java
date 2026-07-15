@@ -47,6 +47,7 @@ public class BrandFilterTest extends BaseTest {
     public void checkContainBrandInItem(){
         String brandName = categoryPage.getText(Locator.ACTIVE_FILTER_ROW).split("\\(")[0].trim();
         List<String> brandNameList = Arrays.asList(brandName.split(" "));
+
         String itemD = categoryPage.getText(By.cssSelector("[class=\"item-card__name-link\"]"));
         List<String> itemList = Arrays.asList(itemD.split(" "));
 

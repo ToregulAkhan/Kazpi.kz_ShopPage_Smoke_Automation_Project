@@ -41,4 +41,7 @@ public class HomePage extends BasePage {
         return new SearchPage(driver);
     }
 
+    public ProductPage productPage(){
+        return new ProductPage(driver);
+    }
 }
