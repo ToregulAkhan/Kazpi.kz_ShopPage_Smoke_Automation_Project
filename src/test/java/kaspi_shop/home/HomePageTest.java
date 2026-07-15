@@ -4,14 +4,17 @@ import kaspi_shop.base.BasePage;
 import kaspi_shop.base.BaseTest;
 import kaspi_shop.constants.Locator;
 import kaspi_shop.constants.Urls;
+import kaspi_shop.listeners.TestListener;
 import kaspi_shop.pages.HomePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.util.*;
+
 
 public class HomePageTest extends BaseTest {
 

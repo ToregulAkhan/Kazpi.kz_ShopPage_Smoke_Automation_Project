@@ -2,13 +2,16 @@ package kaspi_shop.category;
 
 import kaspi_shop.base.BaseTest;
 import kaspi_shop.constants.Locator;
+import kaspi_shop.listeners.TestListener;
 import kaspi_shop.pages.CategoryPage;
 import org.openqa.selenium.*;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
 import java.util.List;
+
 
 public class CategorySortTest extends BaseTest {
     protected CategoryPage categoryPage;

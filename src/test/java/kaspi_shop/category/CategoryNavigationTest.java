@@ -2,12 +2,15 @@ package kaspi_shop.category;
 
 import kaspi_shop.base.BaseTest;
 import kaspi_shop.constants.Locator;
+import kaspi_shop.listeners.TestListener;
 import kaspi_shop.pages.CategoryPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+
 
 public class CategoryNavigationTest extends BaseTest {
     public CategoryPage categoryPage;
