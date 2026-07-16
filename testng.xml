@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="kaspi_shop.listeners.TestListener"/>
+    </listeners>
+
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/Zenbook/Desktop/ITJE java projects/Kaspi.kz_Shop_Page_Smoke_Automation_Project">
+        <classes>
+            <class name="kaspi_shop.category.CategoryFilterTest">
+                <methods>
+                    <include name="checkCategoryOpened"/>
+                    <include name="checkFilters"/>
+                    <include name="checkSelectList"/>
+                </methods>
+            </class>
+            <class name="kaspi_shop.category.CategoryNavigationTest">
+                <methods>
+                    <include name="checkNextSlide"/>
+                    <include name="checkPrevious"/>
+                </methods>
+            </class>
+            <class name="kaspi_shop.category.CategorySortTest">
+                <methods>
+                    <include name="checkSortingPopular"/>
+                    <include name="checkSortingNew"/>
+                    <include name="checkSortingCheep"/>
+                    <include name="checkSortingExpansive"/>
+                    <include name="checkSortingTopRating"/>
+                </methods>
+            </class>
+            <class name="kaspi_shop.filters.BrandFilterTest">
+                <methods>
+                    <include name="checkBrandFilter"/>
+                </methods>
+            </class>
+            <class name="kaspi_shop.filters.PriceFilterTest">
+                <methods>
+                    <include name="checkPriceFilter"/>
+                </methods>
+            </class>
+            <class name="kaspi_shop.filters.SellerFilterTest">
+                <methods>
+                    <include name="checkSellerFilter"/>
+                </methods>
+            </class>
+            <class name="kaspi_shop.home.HomePageTest">
+                <methods>
+                    <include name="checkNavigationItem"/>
+                    <include name="checkCategoryItem"/>
+                    <include name="chooseCity"/>
+                    <include name="checkLogoDisplayed"/>
+                </methods>
+            </class>
+            <class name="kaspi_shop.product.ProductInfTest">
+                <methods>
+                    <include name="checkTvAudioProduct"/>
+                    <include name="checkFashionProduct"/>
+                    <include name="checkFurnitureProduct"/>
+                    <include name="checkPharmacyProduct"/>
+                </methods>
+            </class>
+            <class name="kaspi_shop.search.SearchTest">
+                <methods>
+                    <include name="checkSearchWorks"/>
+                </methods>
+            </class>
+        </classes>
+
+
+    </test>
+</suite>
