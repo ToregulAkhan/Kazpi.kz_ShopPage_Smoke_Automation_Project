@@ -18,6 +18,7 @@ public class HomePage extends BasePage {
         return this;
     }
 
+
     public HomePage openAllCategoriesMenu() {
         click(Locator.ALL_CATEGORIES_BUTTON);
         return this;
